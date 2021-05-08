@@ -1,7 +1,7 @@
 <?php 
 	$content = filter_var(trim($_POST['goal']), FILTER_SANITIZE_STRING);
 
-	$user_id = (string)$_COOKIE['id'];
+	$user_id = (isset ($_COOKIE['user'])) ? $_COOKIE['user'] : 0;
 	echo $user_id;
 	require "../blocks/connect.php";
 
