@@ -10,7 +10,7 @@
 <body>
 	<div class="container mt-4">
 		<?php 
-			if($_COOKIE['user'] == ''):
+			if($_COOKIE['user_id'] == ''):
 		?>
 		<div class="row">
 			<div class="col">
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<?php else: ?>
-			<p>Id: <?=$_COOKIE['user'] ?>. Чтобы выйти нажмите <a href="/exit.php">выйти</a>. </p>
+			<p>Id: <?=$_COOKIE['user_id'] ?>. Чтобы выйти нажмите <a href="/exit.php">выйти</a>. </p>
 			<p>Добавьте ваши цели на день!</p>
 			<form action="validation-form/sendgoals.php" method="post">
 				<input type="text" class="form-control" name="goal" id="goal" 
